@@ -1,0 +1,52 @@
+
+    .first-page {  background-color: black;
+        color: floralwhite;}
+
+    body {
+        color:black;
+        font-family: 'Garamond', serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+h1 {
+    font-weight: normal;
+    font-size: 2em;
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+    text-align: right;
+}
+a {
+     color: floralwhite;
+    }
+
+    #bottom-link {
+        position: absolute;
+        bottom: 40px;
+        right: 30px;
+    }
+
+.background-gradient {
+    background: rgb(255,250,240);
+background: linear-gradient(180deg, rgba(255,250,240,1) 0%, rgba(0,0,0,1) 67%);
+}
+
+    body {
+        margin: 0;
+        font-family: garamond, serif;
+        height: 300vh;
+
+    }
+    a[href="index.html"] {
+        color:black;
+    }
+    a {
+        color: floralwhite;
+        text-decoration: none;
+    }
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 24px;
+}
