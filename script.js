@@ -1,13 +1,23 @@
-window.addEventListener('scroll', function() {
-  // Get the current scroll position from the top of the page
-  const scrollPosition = window.scrollY;
-  // Define a threshold (in pixels) at which the background will change
-  const threshold = 500; // adjust this value as needed
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Script loaded!"); // Debugging message
 
-  // Change the background color when the scroll position exceeds the threshold
-  if (scrollPosition > threshold) {
-    document.body.style.backgroundColor = 'black';
-  } else {
-    document.body.style.backgroundColor = 'white';
-  }
+  window.addEventListener('scroll', function () {
+      // Get the total scrollable height
+      const scrollHeight = document.documentElement.scrollHeight;
+      // Get the current scroll position
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      // Get the viewport height (visible part of the page)
+      const windowHeight = window.innerHeight;
+      // Calculate the threshold: when the user reaches the bottom 10% of the page
+      const threshold = scrollHeight - windowHeight * 1.03;
+
+      console.log("Scroll Position:", scrollTop, "Threshold:", threshold); // Debugging
+
+      // Change background when user nears the bottom
+      if (scrollTop >= threshold) {
+          document.body.style.backgroundColor = 'black';
+      } else {
+          document.body.style.backgroundColor = 'white';
+      }
+  });
 });
