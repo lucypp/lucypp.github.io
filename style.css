@@ -94,9 +94,8 @@ div.a {
 }
 p {
     width: 60%;
-    margin-left: 400px;
-    margin-right: auto; 
-    text-align: left;
+    margin: auto; 
+    text-align: center;
   }
  /* a[href="index.html"] {
         color:black;
