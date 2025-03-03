@@ -11,7 +11,7 @@ body {
         font-optical-sizing: auto;
         font-weight: 550;
         font-style: normal;
-        line-height: 1.6;
+        line-height: 1.7;
         margin: 20px;
         }
       
@@ -97,6 +97,7 @@ p {
     margin: auto; 
     text-align: left;
     padding-left:200px;
+    margin-bottom:25px;
   }
  /* a[href="index.html"] {
         color:black;
