@@ -68,7 +68,7 @@ function clearCanvas() {
 function randomizeParts() {
   const heads = ['🍎', '🍊', '🍇', '🍒', '🍉'];
   const bodies = ['❤️', '💜', '💚', '💙', '💛'];
-  const legs = ['😊', '😁', '😂', '😄', '😍'];
+  const legs = ['😊', '🤨', '😏', '🤡', '😍'];
 
   document.getElementById('head').textContent =
     heads[Math.floor(Math.random() * heads.length)];
