@@ -6,32 +6,43 @@
   <title>Exquisite Corpse</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="nav-left">
-    <a href="../index.html">Home</a>
+      <a href="../home-page/index.html">Home</a>
     </div>
-    <div class="nav-center">Exquisite Corpse</div>
+    <div class="nav-center" id="nav-title"><a href="#" id="randomize">Exquisite Corpse</a></div>
     <div class="nav-right">
       <a href="#" id="reset-link">Restart</a>
     </div>
-    
   </header>
 
   <main>
     <div class="section section-left">
-      <img class="img-left" src="https://i.imgur.com/kJoYNIi.png" alt="First Image" />
+      <div class="emoji-container">
+        <div id="head" class="emoji">🍎</div>
+        <button class="hide-button" onclick="toggleVisibility('head')">Hide</button>
+      </div>
     </div>
     <div class="divider"></div>
-    <div class="section section-middle"></div>
+    <div class="section section-middle">
+      <div class="emoji-container">
+        <div id="body" class="emoji">❤️</div>
+        <button class="hide-button" onclick="toggleVisibility('body')">Hide</button>
+      </div>
+    </div>
     <div class="divider"></div>
     <div class="section section-right">
-      <img class="img-right" src="https://i.imgur.com/cqmrtoL.jpeg" alt="Second Image" />
+      <div class="emoji-container">
+        <div id="legs" class="emoji">😊</div>
+        <button class="hide-button" onclick="toggleVisibility('legs')">Hide</button>
+      </div>
     </div>
   </main> 
+
   <canvas id="canvas"></canvas>
   <script src="script.js"></script> 
 </body>

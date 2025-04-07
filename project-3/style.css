@@ -1,116 +1,147 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Source Code Pro", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 20px;
-    font-style: normal;
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    cursor: url('https://i.imgur.com/HcFhtca.jpeg'), auto;
-  }
-  
-  header {
-    position: relative;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    margin-bottom: 10px;
-  }
-  
-  .nav-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-  
-  
-  .nav-left,
-  .nav-center,
-  .nav-right {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .nav-left {
-    text-align: left;
-  }
-  .nav-right {
-    text-align: right;
-  }
-
-  .nav-left a,
-  .nav-right a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.2s ease;
-  }
-  
-  .nav-left a:hover,
-  .nav-right a:hover {
-    color: blue;
-  }
-  
-  main {
-    display: flex;
-    height: calc(100vh - 70px);      
-  }
-  
-  .section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  .section-left {
-    justify-content: flex-end;
-  }
-  
-  .section-right {
-    justify-content: flex-start;
-  }
-
-.img-left,
-.img-right {
-  display: block;
-  object-fit: contain;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.img-left {
-  max-width: auto;
-  max-height: 60%;
-  margin: 10px 0 10px 20px;
+body {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  cursor: url('https://i.imgur.com/HcFhtca.jpeg'), auto;
 }
 
-.img-right {
-  max-width: auto; 
-  max-height: 95%;
-  margin: 10px 20px 10px 0;
+header {
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 10px;
+  z-index: 2;
 }
 
-  
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-center a:hover {
+  color: blue;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-left {
+  text-align: left;
+}
+
+.nav-right {
+  text-align: right;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: blue;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-left {
+  justify-content: flex-end;
+}
+
+.section-right {
+  justify-content: flex-start;
+}
+
+.emoji-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.emoji {
+  font-size: 6rem;
+  pointer-events: none;
+}
+
+.hide-button {
+  margin-top: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  z-index: 2;
+  position: relative;
+}
+
+.hide-button:hover {
+  background-color: #eee;
+}
+
 .divider {
-    width: 2px;
-    background-color: black;
+  width: 2px;
+  background-color: black;
 }
-  
+
 #canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    pointer-events: none;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
 a {
-    cursor: url('https://i.imgur.com/VcGRWT2.png'), pointer;
+  cursor: url('https://i.imgur.com/VcGRWT2.png'), pointer;
+}
+
+a:hover {
+  cursor: url('https://i.imgur.com/VcGRWT2.png'), pointer;
 }
