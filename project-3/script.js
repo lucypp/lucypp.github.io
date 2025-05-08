@@ -93,6 +93,7 @@ function toggleVisibility(id) {
 
 function isDrawableArea(event) {
   const elementUnderCursor = document.elementFromPoint(event.clientX, event.clientY);
+
   if (elementUnderCursor && elementUnderCursor.classList.contains('hide-button')) {
     return false;
   }

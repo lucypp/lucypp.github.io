@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text {
+    font-size: 14vw; /* or remove this if you're using JS to control it */
+    text-align: center;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  
+  
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    z-index: 10;
+  }
+  
+  .nav-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .home-icon {
+    width: 80px; /* adjust as needed */
+    height: auto;
+    cursor: pointer;
+    padding: 10px;
+  }
+  

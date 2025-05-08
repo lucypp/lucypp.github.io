@@ -2,27 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lucy's Class Website</title>
+  <title>Lucy's Page</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Staatliches&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="home-style.css" />
 </head>
 <body>
-  <div class="white-circle">
-    <div class="black-circle" id="blackCircle"></div>
-  </div>
 
-  <h1>Welcome to my page!</h1>
-  <h1>Check out my websites below ⬇️</h1>
+  <div id="intro" onclick="hideIntro()">
+    <div id="intro-text">
+      <h1>LUCY'S PAGE</h1>
+      <p>(click anywhere)</p>
+    </div>
+  </div>  
 
-  <h2>Projects</h2>
-  <ul>
-    <li><a href="project-1/index.html">Project 1</a></li>
-    <li><a href="project-2/index.html">Project 2</a></li>
-    <li><a href="project-3/index.html">Project 3</a></li>
-    <li><a href="#">Project 4</a></li>
-  </ul>
+  <a href="project-1/index.html" class="corner top-left">ONE</a>
+  <a href="project-2/index.html" class="corner top-right">TWO</a>
+  <a href="project-3/index.html" class="corner bottom-left">THREE</a>
+  <a href="project-4/index.html" class="corner bottom-right">FOUR</a>
 
-
-  <script src="circleTracker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="sketch.js"></script>
+  <script>
+    function hideIntro() {
+      document.getElementById("intro").style.display = "none";
+    }
+  </script>
 </body>
 </html>

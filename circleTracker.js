@@ -1,27 +1,24 @@
-const whiteCircle = document.querySelector('.white-circle');
-const blackCircle = document.getElementById('blackCircle');
+// const pupils = [
+//   { eye: document.querySelector('.left-eye'), pupil: document.getElementById('pupilLeft') },
+//   { eye: document.querySelector('.right-eye'), pupil: document.getElementById('pupilRight') }
+// ];
 
-const whiteRadius = whiteCircle.offsetWidth / 2;
+// document.addEventListener('mousemove', (e) => {
+//   pupils.forEach(({ eye, pupil }) => {
+//     const rect = eye.getBoundingClientRect();
+//     const centerX = rect.left + rect.width / 2;
+//     const centerY = rect.top + rect.height / 2;
 
-document.addEventListener('mousemove', (e) => {
-  const rect = whiteCircle.getBoundingClientRect();
-  const centerX = rect.left + whiteRadius;
-  const centerY = rect.top + whiteRadius;
+//     const dx = e.clientX - centerX;
+//     const dy = e.clientY - centerY;
 
-  const dx = e.clientX - centerX;
-  const dy = e.clientY - centerY;
-  const distance = Math.sqrt(dx * dx + dy * dy);
+//     const angle = Math.atan2(dy, dx);
+//     const distance = Math.min(40, Math.hypot(dx, dy)); // More noticeable movement
 
-  const maxDistance = whiteRadius - blackCircle.offsetWidth / 2;
-  let x = dx;
-  let y = dy;
+//     const x = Math.cos(angle) * distance;
+//     const y = Math.sin(angle) * distance;
 
-  if (distance > maxDistance) {
-    const angle = Math.atan2(dy, dx);
-    x = Math.cos(angle) * maxDistance;
-    y = Math.sin(angle) * maxDistance;
-  }
-
-  blackCircle.style.left = `${whiteRadius + x - blackCircle.offsetWidth / 2}px`;
-  blackCircle.style.top = `${whiteRadius + y - blackCircle.offsetHeight / 2}px`;
-});
+//     pupil.style.left = `calc(50% + ${x}px)`;
+//     pupil.style.top = `calc(50% + ${y}px)`;
+//   });
+// });
