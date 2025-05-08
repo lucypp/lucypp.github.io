@@ -73,7 +73,7 @@ function update() {
 
   if (isHovering) {
     display.textContent = fullTime;
-    display.style.fontSize = hoverFontSize; // ✅ use per-label hover size
+    display.style.fontSize = hoverFontSize;
   } else {
     display.textContent = label;
     display.style.fontFamily = font;
